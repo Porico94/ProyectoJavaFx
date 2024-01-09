@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demojavafx.HelloController">
+<VBox alignment="TOP_LEFT" spacing="10.0" >
+
+    <padding>
+        <javafx.geometry.Insets top="20" right="10" bottom="20" left="10" />
+    </padding>
+
+    <Label text="1. Buenos días/tardes/noches, mi nombre es Pool Rimari lo llamo de parte de Entel"/>
+    <Label text="para informarle que estamos ofreciendo hasta 50% de descuento por 1 año"/>
+
+    <Label text="2. ¿Nos autoriza a usar y tratar sus datos personales y brindarle este ofrecimiento?"/>
+    <Label text="Respuesta válidas: Sí - De Acuerdo - Esta Bien - Acepto - Ya – Ok" textFill="blue"/>
+
+    <Label text="2.1 Si no responde ninguna de estas frases:"/>
+    <Label text="¿Podemos tomar su respuesta como un sí? Para continuar y explicarle." textFill="blue"/>
+
+    <Label text="2.3 Si sigue sin responder ninguna frase válida: "/>
+    <Label text="Bien tomaremos su respuesta como un sí, antes de continuar le informo que" textFill="blue"/>
+    <Label text="con fines de calidad y seguridad la llamada esta siendo grabada." textFill="blue"/>
+
+    <Label text="3. Antes de continuar le informo que"/>
+    <Label text="con fines de calidad y seguridad la llamada está siendo grabada."/>
+
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" >
+
+    <padding>
+        <javafx.geometry.Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <Label text="Es usted el titular de la línea?:" GridPane.rowIndex="1"/>
+    <ChoiceBox fx:id="titularChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Sí" />
+                <String fx:value="No" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+    <Label text="Con quien tengo el gusto? Nombre:" GridPane.rowIndex="2"/>
+    <TextField fx:id="entradaNombre" promptText="Introduce el nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" focusTraversable="false"/>
+
+    <Label text="Con que operador esta actualmente?:" GridPane.rowIndex="3"/>
+    <ChoiceBox fx:id="operadorChoiceBox" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Movistar" />
+                <String fx:value="Claro" />
+                <String fx:value="Bitel" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+    <Label text="Cuantas lineas tiene a su nombre?:" GridPane.rowIndex="4"/>
+    <TextField fx:id="numeroLineas" promptText="Introduce el # de lineas" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Cuál es el número que desea portar?:" GridPane.rowIndex="5"/>
+    <TextField fx:id="numeroCelular" promptText="Introduce el # celular" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label text="Cuánto paga por su linea?:" GridPane.rowIndex="6"/>
+    <TextField fx:id="tipoPlan" promptText="Introduce el tipo de plan" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <Label text="Me indica su numero de DNI?:" GridPane.rowIndex="7"/>
+    <TextField fx:id="numeroDNI" promptText="Introduce el DNI" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    <Label text="------------------------------------" GridPane.rowIndex="8"/>
+
+    <Label text="En que ciudad vive actualmente?:" GridPane.rowIndex="9"/>
+    <TextField fx:id="ciudad" promptText="Introduce la ciudad" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+    <Label text="Me indica su dirección exacta?:" GridPane.rowIndex="10"/>
+    <TextField fx:id="direccion" promptText="Introduce la direccion" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+    <Label text="Me indica alguna referencia?:" GridPane.rowIndex="11" />
+    <TextField fx:id="referenciaDireccion" promptText="Introduce la referencia" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+
+    <Label text="Colocar las coordenadas de su dirección?:" GridPane.rowIndex="12"/>
+    <TextField fx:id="coordenadasDireccion" promptText="Introduce las coordenadas" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+
+    <Label text="------------------------------------" GridPane.rowIndex="13"/>
+
+    <Label text="Me indica su lugar de nacimiento:" GridPane.rowIndex="14"/>
+    <TextField fx:id="lugarNacimiento" promptText="Lugar de nacimiento" GridPane.columnIndex="1" GridPane.rowIndex="14"/>
+
+    <Label text="Nombre del Padre:" GridPane.rowIndex="15"/>
+    <TextField fx:id="nombrePadre" promptText="Nombre del Padre" GridPane.columnIndex="1" GridPane.rowIndex="15"/>
+
+    <Label text="Nombre de la madre:" GridPane.rowIndex="16"/>
+    <TextField fx:id="nombreMadre" promptText="Nombre de la Madre" GridPane.columnIndex="1" GridPane.rowIndex="16"/>
+</GridPane>
+
+    <HBox alignment="CENTER">
+        <Button text="Limpiar Datos" onAction="#limpiarDatos"/>
+
+    </HBox>
+
+</VBox>
+</ScrollPane>
